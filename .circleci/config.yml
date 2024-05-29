@@ -3,15 +3,18 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:14 # Use an appropriate Node.js Docker image
     steps:
       - checkout
       - run:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Run Playwright Tests
-          command: npx playwright test
+          name: Install Playwright Browsers
+          command: npx playwright install
+      - run:
+          name: Run Tests
+          command: npm test
 
 workflows:
   version: 2
