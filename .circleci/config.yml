@@ -3,15 +3,12 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:14 # Use an appropriate Node.js Docker image
+      - image: circleci/node:14-browsers # Use an appropriate Node.js Docker image with browsers
     steps:
       - checkout
       - run:
           name: Install Dependencies
           command: npm install
-      - run:
-          name: Install Playwright Dependencies
-          command: sudo npx playwright install-deps
       - run:
           name: Install Playwright Browsers
           command: npx playwright install
