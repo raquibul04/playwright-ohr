@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue May 21 13:52:22 EDT 2024","Tue May 21 13:52:29 EDT 2024","6852","chromium","register.spec.js","","","","Users should be able to register successfully",""
+"passed","Tue May 21 13:52:29 EDT 2024","Tue May 21 13:52:37 EDT 2024","8682","chromium","register.spec.js","","","","Users should be able to add new employee to the system",""

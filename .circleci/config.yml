@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Run Playwright Tests
+          command: npx playwright test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
