@@ -7,6 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update System and Install Dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y libnss3 libnspr4 libatk-bridge2.0-0 libatspi2.0-0 libgbm1 libxkbcommon0 libasound2
+      - run:
           name: Install Dependencies
           command: npm install
       - run:
