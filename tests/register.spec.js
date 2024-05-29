@@ -29,5 +29,5 @@ test("Users should be able to add new employee to the system", async ({
   await reg.sideNav(dataSet.sideNavAction);
   await reg.verifying_text_on_the_following_Page(dataSet.sideNavAction);
   await pim.clikingOnButton();
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(3000);
 });
